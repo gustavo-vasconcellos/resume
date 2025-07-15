@@ -7,6 +7,7 @@ WORKDIR /app
 
 COPY . .
 RUN deno cache main.ts
+RUN deno run -A dev.ts build
 
 EXPOSE 8000
 
