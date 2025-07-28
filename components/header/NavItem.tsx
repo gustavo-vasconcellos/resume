@@ -11,12 +11,9 @@ export function NavItem({ name, href, showing: isShowing, index, cb }: Props) {
     <a
       key={name}
       href={href}
-      className={`block py-2 px-4 transition-all duration-300 rounded-lg hover:text-primary hover:bg-primary/10 hover:translate-x-2 ${
+      className={`${
         isShowing ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5"
-      } 
-      
-      md:transition-all md:duration-300 md:relative md:group md:opacity-0 md:animate-fade-in-up md:hover:-translate-y-0.5 md:hover:text-primary
-      `}
+      } block relative py-2 px-4 transition-all duration-300 hover:text-primary group md:p-0 md:animate-fade-in-up hover:-translate-y-0.5`}
       style={{
         transitionDelay: isShowing ? `${index * 100}ms` : "0ms",
         animationDelay: `${index * 100}ms`,
