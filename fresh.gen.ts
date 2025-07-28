@@ -9,7 +9,10 @@ import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $Header from "./islands/Header.tsx";
+import * as $MouseFollower from "./islands/MouseFollower.tsx";
 import * as $ThemeController from "./islands/ThemeController.tsx";
+import * as $hero_Buttons from "./islands/hero/Buttons.tsx";
+import * as $hero_Content from "./islands/hero/Content.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -23,7 +26,10 @@ const manifest = {
   islands: {
     "./islands/Counter.tsx": $Counter,
     "./islands/Header.tsx": $Header,
+    "./islands/MouseFollower.tsx": $MouseFollower,
     "./islands/ThemeController.tsx": $ThemeController,
+    "./islands/hero/Buttons.tsx": $hero_Buttons,
+    "./islands/hero/Content.tsx": $hero_Content,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
