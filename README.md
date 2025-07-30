@@ -14,6 +14,8 @@ deno task start
 
 This will watch the project directory and restart as necessary.
 
+All code in `main` branch will be automatically deployed in: https://resume-gustavo-119098213322.us-central1.run.app/
+
 ## Roadmap
 
 - [ ] Develop the first version
