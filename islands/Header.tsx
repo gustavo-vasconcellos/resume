@@ -21,7 +21,12 @@ const Header = () => {
     };
 
     globalThis.addEventListener("scroll", handleScroll);
-    return () => globalThis.removeEventListener("scroll", handleScroll);
+    globalThis.addEventListener("DOMContentLoaded", handleScroll);
+
+    return () => {
+      globalThis.removeEventListener("scroll", handleScroll);
+      globalThis.removeEventListener("DOMContentLoaded", handleScroll);
+    };
   }, []);
 
   const handleToggleMenu = useCallback(() => {
@@ -39,8 +44,8 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="animate-fade-in">
-            <span className="text-2xl font-bold text-primary transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer">
-              &lt;Portfolio/&gt;
+            <span className="bg-gradient-to-r text-shadow-xs from-secondary via-accent/80 to-secondary bg-clip-text text-transparent animate-fade-in-up delay-700 text-2xl font-bold transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer">
+              &lt;Gustavo/&gt;
             </span>
           </div>
 

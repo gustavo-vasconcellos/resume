@@ -3,10 +3,10 @@ import { MouseFollower } from "../islands/MouseFollower.tsx";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-base-300 via-primary to-base-300 overflow-hidden flex items-center">
+    <section className="relative min-h-screen bg-gradient-to-br pb-8 from-base-300 via-primary to-base-300 overflow-hidden flex items-center">
       <MouseFollower />
 
-      <div className="container mx-auto px-6 z-10">
+      <div className="container max-w-7xl mx-auto px-6 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <HeroContent />
         </div>

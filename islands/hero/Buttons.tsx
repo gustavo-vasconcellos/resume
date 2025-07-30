@@ -14,7 +14,7 @@ export function HeroButtons() {
         type="button"
         data-href="projects"
         onClick={scrollTo}
-        className="btn btn-lg group relative border-0 bg-gradient-to-r from-secondary to-accent text-accent-content/80 font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/25"
+        className="btn sm:btn-lg group relative border-0 bg-gradient-to-r from-secondary to-accent text-accent-content/80 font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/25"
       >
         <span className="relative z-10 flex items-center gap-2">
           View Projects
@@ -38,7 +38,7 @@ export function HeroButtons() {
         type="button"
         data-href="contact"
         onClick={scrollTo}
-        className="btn btn-lg group border-2 border-white/20 text-base-content font-semibold rounded-full backdrop-blur-sm hover:border-purple-400 hover:bg-purple-400/10 transition-all duration-300 hover:scale-105"
+        className="btn sm:btn-lg group border-2 border-white/20 text-base-content font-semibold rounded-full backdrop-blur-sm hover:border-purple-400 hover:bg-purple-400/10 transition-all duration-300 hover:scale-105"
       >
         <span className="flex items-center gap-2">
           Hire Me

@@ -1,17 +1,34 @@
-import { useState, useRef, useEffect } from "preact/hooks";
+import { useSignal } from "@preact/signals";
+import { useRef, useEffect, useMemo } from "preact/hooks";
 
-export const useInView = (threshold = 0.1) => {
-  const [isInView, setIsInView] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+let timer = 0;
+
+export function useInView<T extends HTMLElement>(threshold = 0.1, delay = 0) {
+  const isInView = useSignal(false);
+  const ref = useRef<T>(null);
 
   useEffect(() => {
+    if (isInView.value) return
+    
     const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
+      ([entry]) => {
+        timer = setTimeout(() => {
+          if (isInView.value) return observer.disconnect();
+
+          isInView.value = entry.isIntersecting;
+        }, delay);
+        return () => clearTimeout(timer);
+      },
       { threshold }
     );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold]);
 
-  return [ref, isInView] as const;
-};
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [threshold, delay]);
+
+  return useMemo(
+    () => [ref, isInView] as const,
+    [ref.current, isInView.peek()]
+  );
+}

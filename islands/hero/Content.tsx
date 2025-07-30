@@ -15,42 +15,43 @@ export function HeroContent() {
   return (
     <>
       <div
-        class={`flex-1 flex flex-col gap-8 pt-14 text-left transition-all duration-1000 ${
+        class={`flex-1 flex flex-col gap-8 sm:pt-14 pt-20 text-left transition-all duration-1000 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
         }`}
       >
-        <div>
-          <div class="text-base-content/80 text-lg mb-2 animate-fade-in-up delay-300">
+        <div class="sm:text-left text-center">
+          <div class="text-base-content/80 text-lg sm:mb-2 animate-fade-in-up delay-300 font-bold">
             Hello
           </div>
-          <h1 class="text-6xl lg:text-7xl font-bold mb-4">
+          <h1 class="text-5xl lg:text-7xl font-bold mb-4">
             <span class="text-base-content animate-fade-in-up delay-500">
               I'm{" "}
             </span>
             <span class="bg-gradient-to-r text-shadow-xs from-secondary via-accent/80 to-secondary bg-clip-text text-transparent animate-fade-in-up delay-700 inline-block hover:scale-105 transition-transform duration-300">
-              Gustavo,
+              Gustavo
             </span>
+            <span class="sm:inline hidden">,</span>
           </h1>
-          <h2 class="text-4xl lg:text-5xl font-bold text-base-content/90 animate-fade-in-up delay-900">
+          <h2 class="text-3xl lg:text-5xl font-bold text-base-content/90 animate-fade-in-up delay-900">
             Fullstack Software Engineer
           </h2>
         </div>
-        <div class="flex flex-wrap gap-4 animate-fade-in-up delay-1100">
+        <div class="flex flex-wrap sm:justify-start justify-center gap-4 animate-fade-in-up delay-1100">
           <HeroButtons />
         </div>
         <div class="flex items-center gap-4">
-          <div class="text-base-content/80 text-sm tracking-wider">
+          <div class="text-base-content/80 text-xs sm:text-sm tracking-wider">
             — PROJECTS
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-4xl font-bold text-shadow-xs bg-gradient-to-r from-purple-400 to-accent bg-clip-text text-transparent">
+            <span class="text-3xl sm:text-4xl font-bold text-shadow-xs bg-gradient-to-r from-purple-400 to-accent bg-clip-text text-transparent">
               50+
             </span>
             <div class="flex -space-x-2">
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  class={`w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-base-content text-xs font-semibold shadow-lg transform transition-all duration-500 hover:scale-110 hover:z-10`}
+                  class={`w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-base-content text-xs font-semibold shadow-lg transform transition-all duration-500 hover:scale-110 hover:z-10 max-sm:nth-[n+4]:hidden`}
                   style={{ animationDelay: `${index * 200}ms` }}
                   title={project.name}
                 >
@@ -70,7 +71,7 @@ export function HeroContent() {
         }`}
       >
         <div class="relative">
-          <div class="relative w-80 h-96 mx-auto">
+          <div class="relative sm:w-80 w-64 h-96 mx-auto">
             <div class="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 rounded-3xl blur-sm animate-pulse"></div>
             <div class="absolute inset-1 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl"></div>
             <div class="absolute overflow-hidden inset-4 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">

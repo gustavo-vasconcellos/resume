@@ -11,6 +11,10 @@ import * as $Counter from "./islands/Counter.tsx";
 import * as $Header from "./islands/Header.tsx";
 import * as $MouseFollower from "./islands/MouseFollower.tsx";
 import * as $ThemeController from "./islands/ThemeController.tsx";
+import * as $about_me_ExpertiseCard from "./islands/about-me/ExpertiseCard.tsx";
+import * as $about_me_SkillBadge from "./islands/about-me/SkillBadge.tsx";
+import * as $about_me_StatCard from "./islands/about-me/StatCard.tsx";
+import * as $about_me_Tabs from "./islands/about-me/Tabs.tsx";
 import * as $hero_Buttons from "./islands/hero/Buttons.tsx";
 import * as $hero_Content from "./islands/hero/Content.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -28,6 +32,10 @@ const manifest = {
     "./islands/Header.tsx": $Header,
     "./islands/MouseFollower.tsx": $MouseFollower,
     "./islands/ThemeController.tsx": $ThemeController,
+    "./islands/about-me/ExpertiseCard.tsx": $about_me_ExpertiseCard,
+    "./islands/about-me/SkillBadge.tsx": $about_me_SkillBadge,
+    "./islands/about-me/StatCard.tsx": $about_me_StatCard,
+    "./islands/about-me/Tabs.tsx": $about_me_Tabs,
     "./islands/hero/Buttons.tsx": $hero_Buttons,
     "./islands/hero/Content.tsx": $hero_Content,
   },
