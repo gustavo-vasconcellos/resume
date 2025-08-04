@@ -249,7 +249,6 @@ export function ExperienceTimelineList() {
           achievements={exp.achievements}
           techStack={exp.techStack}
           companyType={exp.companyType}
-          delay={index * 200}
           isFirst={index === 0}
           isLast={index === arr.length - 1}
         />
@@ -268,7 +267,6 @@ interface TimelineItemProps {
   companyType: CompanyType;
   isFirst?: boolean;
   isLast?: boolean;
-  delay?: number;
 }
 
 const TimelineItem = ({
@@ -281,7 +279,6 @@ const TimelineItem = ({
   companyType,
   isFirst = false,
   isLast = false,
-  delay = 0,
 }: TimelineItemProps) => {
   const [ref, inView] = useInView<HTMLLIElement>(0.01);
 
