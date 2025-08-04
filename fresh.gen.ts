@@ -15,6 +15,9 @@ import * as $about_me_ExpertiseCard from "./islands/about-me/ExpertiseCard.tsx";
 import * as $about_me_SkillBadge from "./islands/about-me/SkillBadge.tsx";
 import * as $about_me_StatCard from "./islands/about-me/StatCard.tsx";
 import * as $about_me_Tabs from "./islands/about-me/Tabs.tsx";
+import * as $experience_timeline_CarouselButtons from "./islands/experience-timeline/CarouselButtons.tsx";
+import * as $experience_timeline_FilterButton from "./islands/experience-timeline/FilterButton.tsx";
+import * as $experience_timeline_List from "./islands/experience-timeline/List.tsx";
 import * as $hero_Buttons from "./islands/hero/Buttons.tsx";
 import * as $hero_Content from "./islands/hero/Content.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -36,6 +39,11 @@ const manifest = {
     "./islands/about-me/SkillBadge.tsx": $about_me_SkillBadge,
     "./islands/about-me/StatCard.tsx": $about_me_StatCard,
     "./islands/about-me/Tabs.tsx": $about_me_Tabs,
+    "./islands/experience-timeline/CarouselButtons.tsx":
+      $experience_timeline_CarouselButtons,
+    "./islands/experience-timeline/FilterButton.tsx":
+      $experience_timeline_FilterButton,
+    "./islands/experience-timeline/List.tsx": $experience_timeline_List,
     "./islands/hero/Buttons.tsx": $hero_Buttons,
     "./islands/hero/Content.tsx": $hero_Content,
   },
