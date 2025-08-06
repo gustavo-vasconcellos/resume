@@ -30,7 +30,7 @@ export function NavItem({ name, href, showing: isShowing, index, cb }: Props) {
       }}
     >
       {name}
-      <span className="md:block hidden absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+      <span class="md:block hidden absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
     </a>
   );
 }

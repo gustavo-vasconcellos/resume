@@ -8,7 +8,7 @@ export function MenuButton({ onClick: handleClick, mods, isOpen }: Props) {
   return (
     <button
       type="button"
-      className="md:hidden w-8 h-8 flex flex-col justify-center items-center space-y-1 transition-all duration-300"
+      class="md:hidden w-8 h-8 flex flex-col justify-center items-center space-y-1 transition-all duration-300"
       onClick={handleClick}
       aria-label="Toggle mobile menu"
     >

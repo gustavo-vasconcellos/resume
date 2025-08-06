@@ -5,8 +5,8 @@ import { MenuButton } from "../components/header/MenuButton.tsx";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
   { name: "About", href: "#about" },
+  { name: "Career", href: "#career" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ] as const;
@@ -41,15 +41,15 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="animate-fade-in">
-            <span className="bg-gradient-to-r text-shadow-xs from-secondary via-accent/80 to-secondary bg-clip-text text-transparent animate-fade-in-up delay-700 text-2xl font-bold transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="animate-fade-in">
+            <span class="bg-gradient-to-r text-shadow-xs from-secondary via-accent/80 to-secondary bg-clip-text text-transparent animate-fade-in-up delay-700 text-2xl font-bold transition-transform duration-300 hover:-translate-y-0.5 cursor-pointer">
               &lt;Gustavo/&gt;
             </span>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div class="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <NavItem
                 key={index}
@@ -75,7 +75,7 @@ const Header = () => {
               : "bg-neutral/80 text-neutral-content backdrop-blur-md shadow-lg"
           } ${isMobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
         >
-          <div className="py-3">
+          <div class="py-3">
             {navItems.map((item, index) => (
               <NavItem
                 key={index}

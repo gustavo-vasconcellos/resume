@@ -294,33 +294,37 @@ const TimelineItem = ({
         inView.value ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
       }`}
     >
-      {!isFirst && <hr className="bg-primary" />}
-      <div className="timeline-start mb-4 self-baseline! block badge badge-ghost text-md font-medium py-1 px-3 h-auto w-auto rounded-lg text-center">
+      {!isFirst && <hr class="bg-primary" />}
+      <div class="timeline-start mb-4 self-baseline! block badge badge-ghost text-md font-medium py-1 px-3 h-auto w-auto rounded-lg text-center">
         <p class="whitespace-pre">{period}</p>
         <p class="text-xs">({periodTime})</p>
       </div>
-      <div className="timeline-middle">
-        <div className="w-4 h-4 bg-primary rounded-full m-1" />
+      <div class="timeline-middle">
+        <div class="w-4 h-4 bg-primary rounded-full m-1" />
       </div>
-      <div className="timeline-end mt-4">
-        <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 sm:max-w-md max-w-full w-[90vw]">
-          <div className="card-body">
-            <div className="flex justify-between items-start mb-4">
+      <div class="timeline-end mt-4">
+        <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 sm:max-w-md max-w-full w-[90vw]">
+          <div class="card-body">
+            <div class="flex justify-between items-start">
               <div>
-                <h3 className="card-title text-lg">{position}</h3>
-                <p className="flex justify-start items-center gap-2 mt-1">
-                  <span className="font-semibold text-primary">{company}</span>
+                <h3 class="card-title text-lg">{position}</h3>
+                <p class="flex justify-start items-start gap-2 mt-1 h-10">
+                  <span class="font-semibold text-primary">{company}</span>
                   <CompanyBadge type={companyType} />
                 </p>
               </div>
             </div>
-            <div className="space-y-2 mb-4 collapse p-0">
-              <input type="checkbox" id={company.replace(/ /g, "")} />
+            <div class="space-y-2 mb-4 collapse p-0">
+              <input
+                type="checkbox"
+                class="peer"
+                id={company.replace(/ /g, "")}
+              />
               <div class="collapse-title p-0 m-0 cursor-auto!">
                 {firstAchievements.map((achievement, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-sm text-base-content/80">
+                  <div key={index} class="flex items-start gap-2">
+                    <div class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p class="text-sm text-base-content/80">
                       {achievement}
                     </p>
                   </div>
@@ -328,28 +332,25 @@ const TimelineItem = ({
               </div>
               <div class="collapse-content p-0 m-0">
                 {otherAchievements.map((achievement, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-sm text-base-content/80">
+                  <div key={index} class="flex items-start gap-2">
+                    <div class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                    <p class="text-sm text-base-content/80">
                       {achievement}
                     </p>
                   </div>
                 ))}
               </div>
-              <div class="flex justify-end">
-                <label
-                  class="text-xs text-primary hover:text-secondary transition-colors duration-200 font-bold cursor-pointer"
-                  for={company.replace(/ /g, "")}
-                >
-                  See more
-                </label>
-              </div>
+              <label
+                class="text-xs text-right text-primary hover:text-secondary transition-colors duration-200 font-bold cursor-pointer
+                  after:content-['See_more'] peer-checked:after:content-['See_less']"
+                for={company.replace(/ /g, "")}
+              ></label>
             </div>
-            <div className="flex flex-wrap gap-1">
+            <div class="flex flex-wrap gap-1">
               {techStack.map((tech, index) => (
                 <div
                   key={index}
-                  className="badge badge-secondary badge-outline badge-sm py-0.5 px-2 font-medium h-auto"
+                  class="badge badge-secondary hover:badge-primary transition-colors duration-200 badge-outline badge-sm py-0.5 px-2 font-medium h-auto cursor-default"
                 >
                   {tech}
                 </div>
@@ -358,7 +359,7 @@ const TimelineItem = ({
           </div>
         </div>
       </div>
-      {!isLast && <hr className="bg-primary" />}
+      {!isLast && <hr class="bg-primary" />}
     </li>
   );
 };

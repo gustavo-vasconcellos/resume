@@ -96,7 +96,7 @@ export function Tabs() {
 
   return (
     <>
-      <div className="tabs sm:tabs-lg tabs-sm tabs-box w-fit mx-auto mb-8 gap-2">
+      <div class="tabs sm:tabs-lg tabs-sm tabs-box w-fit mx-auto mb-8 gap-2">
         <button
           type="button"
           className={`tab transition-colors duration-300 ${
@@ -120,7 +120,7 @@ export function Tabs() {
       </div>
       <div>
         {activeTab.value === "skills" && (
-          <div className="flex flex-row gap-2 flex-wrap justify-center">
+          <div class="flex flex-row gap-2 flex-wrap justify-center">
             {skills.map((skill, index) => (
               <SkillBadge
                 key={skill}
@@ -131,7 +131,7 @@ export function Tabs() {
           </div>
         )}
         {activeTab.value === "expertise" && (
-          <div className="grid md:grid-cols-2 gap-6">
+          <div class="grid md:grid-cols-2 gap-6">
             {expertises.map(({ area, description }, index) => (
               <ExpertiseCard
                 label={area}

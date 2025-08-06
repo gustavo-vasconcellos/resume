@@ -31,21 +31,21 @@ const filters = [
 
 const ExperienceTimeline = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-base-200 to-base-300 py-8">
-      <div className="container mx-auto max-w-7xl text-center mb-16">
-        <div className="badge badge-secondary badge-lg mb-4">
+    <div id="career" class="min-h-screen bg-gradient-to-br from-base-200 to-base-300 py-8">
+      <div class="container mx-auto max-w-7xl text-center mb-16">
+        <div class="badge badge-secondary badge-lg mb-4">
           Career Journey
         </div>
-        <h1 className="text-5xl font-black mb-4">
-          My <span className="text-primary">Work Experience</span>
+        <h1 class="text-5xl font-black mb-4">
+          My <span class="text-primary">Work Experience</span>
         </h1>
-        <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
+        <p class="text-xl text-base-content/70 max-w-2xl mx-auto">
           8+ years of rapid growth from intern to technical leader, founding
           companies and delivering enterprise solutions
         </p>
       </div>
-      <div className="container mx-auto max-w-7xl sm:flex hidden justify-center mb-12">
-        <div className="join">
+      <div class="container mx-auto max-w-7xl sm:flex hidden justify-center mb-12">
+        <div class="join">
           {filters.map((filter) => (
             <ExperienceTimelineFilterButton
               key={filter.key}
@@ -62,7 +62,7 @@ const ExperienceTimeline = () => {
         </div>
         <div
           data-slider
-          className="timeline timeline-start timeline-horizontal carousel carousel-center pb-6 2xl:px-[10%] xl:px-[5%] sm:px-8 px-4"
+          class="timeline timeline-start timeline-horizontal carousel carousel-center pb-6 2xl:px-[10%] xl:px-[5%] sm:px-8 px-4 overflow-y-hidden"
         >
           <ExperienceTimelineList />
         </div>

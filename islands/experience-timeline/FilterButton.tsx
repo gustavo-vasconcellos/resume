@@ -18,7 +18,7 @@ export function ExperienceTimelineFilterButton({ label, count, value }: Props) {
       onClick={() => (selectedFilter.value = value)}
     >
       {label}
-      <div className="badge badge-sm ml-2">{count}</div>
+      <div class="badge badge-sm ml-2">{count}</div>
     </button>
   );
 }

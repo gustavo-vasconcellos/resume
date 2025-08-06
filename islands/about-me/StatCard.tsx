@@ -17,11 +17,11 @@ export const StatCard = ({ number, label, delay = 0 }: Props) => {
         isInView.value ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       } hover:scale-105`}
     >
-      <div className="stat-value text-primary tabular-nums">
+      <div class="stat-value text-primary tabular-nums">
         <Counter end={number} suffix="+" />
       </div>
-      <div className="stat-title">{label}</div>
-      <div className="stat-desc">and counting...</div>
+      <div class="stat-title">{label}</div>
+      <div class="stat-desc">and counting...</div>
     </div>
   );
 };

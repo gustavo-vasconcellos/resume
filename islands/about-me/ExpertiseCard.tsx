@@ -16,9 +16,9 @@ export const ExpertiseCard = ({ label, description, delay = 0 }: Props) => {
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       } card bg-base-200 shadow-md hover:shadow-lg transition-all duration-300`}
     >
-      <div className="card-body">
-        <h3 className="card-title text-primary">{label}</h3>
-        <p className="text-sm opacity-80">{description}</p>
+      <div class="card-body">
+        <h3 class="card-title text-primary">{label}</h3>
+        <p class="text-sm opacity-80">{description}</p>
       </div>
     </div>
   );

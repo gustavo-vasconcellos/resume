@@ -22,7 +22,7 @@ export function MouseFollower() {
   return (
     <div
       ref={mousePosition}
-      className="fixed inset-0 w-40 h-40 bg-accent/20 rounded-full blur-3xl transition-all duration-300 ease-out pointer-events-none"
+      class="fixed inset-0 w-40 h-40 bg-accent/20 rounded-full blur-3xl transition-all duration-300 ease-out pointer-events-none"
       style={{
         willChange: "transform",
       }}

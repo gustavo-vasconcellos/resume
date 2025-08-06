@@ -14,7 +14,7 @@ export const SkillBadge = ({ skill, delay = 0 }: Props) => {
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       }`}
     >
-      <span className="kbd badge badge-primary badge-soft badge-lg h-auto text-center hover:badge-secondary transition-colors duration-300 cursor-default">
+      <span class="kbd badge badge-primary badge-soft badge-lg h-auto text-center hover:badge-secondary transition-colors duration-300 cursor-default">
         {skill}
       </span>
     </div>
